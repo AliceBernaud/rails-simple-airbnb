@@ -1,0 +1,25 @@
+
+  <h1>Flats</h1>
+    <ul>
+      <%  @flats.each do |flat| %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"class="card-trip-user avatar-bordered"/>
+        <div class="card-trip-infos">
+          <li>
+          <div>
+            <h2><%= link_to flat.name, flat_path(flat) %> </h2>
+            <p><%= flat.address %>
+            <p><%= flat.description %>
+            <span class="badge badge-primary badge-pill">2</span>
+          </div>
+            <h2 class="card-trip-pricing"><%= flat.price_per_night %></h2>
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+          </li>
+        <% end %>
+
+        <%= link_to "New Flat", new_flat_path%>
+      </ul>
+    </div>
+</div>
